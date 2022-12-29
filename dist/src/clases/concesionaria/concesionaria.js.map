@@ -1,0 +1,1 @@
+{"version":3,"file":"Concesionaria.js","sourceRoot":"","sources":["../../../../src/clases/Concesionaria/Concesionaria.ts"],"names":[],"mappings":";;AAEA,MAAM,aAAa;IAOf,YAAa,MAAc,EAAE,YAAoB;QAC7C,IAAI,CAAC,MAAM,GAAG,MAAM,CAAC;QACrB,IAAI,CAAC,KAAK,GAAG,YAAY,CAAC;QAC1B,IAAI,CAAC,SAAS,GAAG,EAAE,CAAA;QACnB,IAAI,CAAC,UAAU,GAAG,EAAE,CAAA;IACxB,CAAC;CACJ"}
