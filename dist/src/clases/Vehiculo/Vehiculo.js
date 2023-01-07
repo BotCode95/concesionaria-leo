@@ -15,7 +15,6 @@ class Vehiculo {
     }
     nivelDeDesgaste() {
         const antiguedad = this.calcularAntiguedad();
-        console.log('Antiguedad Vehiculo', antiguedad);
         if (this.categoria === 'Camioneta') {
             if (this.tipoDeCombustible === 'Diesel') {
                 this.nivelDesgaste = (this.kilometraje / antiguedad) / 1000;
@@ -23,6 +22,7 @@ class Vehiculo {
             else {
                 this.nivelDesgaste = (this.kilometraje / antiguedad) / 100;
             }
+            console.log('Nivel de desgaste del auto', this.nivelDesgaste);
         }
         else if (this.categoria === 'Motocicleta') {
             if (this.serviceAlDia && this.kilometraje < 30000) {
@@ -31,6 +31,7 @@ class Vehiculo {
             else {
                 this.nivelDesgaste = (this.kilometraje / antiguedad) / 10;
             }
+            console.log('Nivel de desgaste del auto', this.nivelDesgaste);
         }
         else {
             if (this.serviceAlDia) {
@@ -41,7 +42,6 @@ class Vehiculo {
             }
             console.log('Nivel de desgaste del auto', this.nivelDesgaste);
         }
-        console.log('metodo nivel de desgaste');
     }
     calcularAntiguedad() {
         const anioActual = new Date().getFullYear();
@@ -52,7 +52,7 @@ class Vehiculo {
     }
 }
 exports.Vehiculo = Vehiculo;
-const auto = new Vehiculo(10000, 'Nafta', 'Corolla', 'Toyota', 6000000, false, 'Auto', 2010);
-auto.nivelDeDesgaste();
-console.log(auto);
+// const auto = new Vehiculo(10000, 'Nafta', 'Corolla', 'Toyota', 6000000, false, 'Auto', 2010)
+// auto.nivelDeDesgaste()
+// console.log(auto)
 //# sourceMappingURL=Vehiculo.js.map
