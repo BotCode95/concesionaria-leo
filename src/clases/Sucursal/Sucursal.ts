@@ -2,10 +2,6 @@ import { Concesionaria } from "../Concesionaria/Concesionaria";
 import { Gerente } from "../Gerente/Gerente";
 import { Vehiculo } from "../Vehiculo/Vehiculo";
 import fs from 'fs'
-import path from 'path'
-
-
-//TODO: Validar pase de vehiculos de la concesionaria a la sucursal
 
 export class Sucursal extends Concesionaria {
     direccion: string;
@@ -13,8 +9,8 @@ export class Sucursal extends Concesionaria {
     gerente: Gerente | null;
 
 
-    constructor( nombre: string, stock: number, direccion: string, horarioDeAtencion: string){
-        super(nombre, stock)
+    constructor( nombre: string,  vehiculos: Vehiculo[],direccion: string, horarioDeAtencion: string){
+        super(nombre, vehiculos)
         this.direccion = direccion;
         this.horarioDeAtencion = horarioDeAtencion;
         this.gerente = null;
@@ -28,9 +24,8 @@ export class Sucursal extends Concesionaria {
         fs.appendFile(nombreSucursal +'-vehiculos.txt',this.listarVehiculos() + "." + "\n" , (err) => {
             if(err) {
                 throw err
-
             }
-            console.log('el archivo se creo exitosamente')
+            console.log('el archivo se creo exitosamente con el nombre ' + nombreSucursal +'-vehiculos en la raiz del proyecto')
         })
     }
     

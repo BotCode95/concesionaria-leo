@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Concesionaria = void 0;
 class Concesionaria {
-    constructor(nombre, stockInicial, vehiculos = []) {
+    constructor(nombre, vehiculos = []) {
         this.nombre = nombre;
-        this.stock = stockInicial;
+        this.stock = vehiculos.length;
         this.vehiculos = vehiculos;
     }
     agregarVehiculo(vehiculo) {
@@ -12,7 +12,6 @@ class Concesionaria {
         this.stock += 1;
     }
     getVehiculos() {
-        console.log(this.vehiculos);
         return this.vehiculos;
     }
     buscarVehiculo(tipoDeBusqueda, busqueda, busqueda2 = 0) {

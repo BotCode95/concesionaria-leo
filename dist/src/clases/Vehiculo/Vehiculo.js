@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Vehiculo = void 0;
+exports.vehiculos = exports.Vehiculo = void 0;
 class Vehiculo {
     constructor(kilometraje, tipoDeCombustible, modelo, marca, precio, serviceAlDia, tipocategoria, anio) {
         this.kilometraje = kilometraje;
@@ -52,7 +52,14 @@ class Vehiculo {
     }
 }
 exports.Vehiculo = Vehiculo;
-// const auto = new Vehiculo(10000, 'Nafta', 'Corolla', 'Toyota', 6000000, false, 'Auto', 2010)
-// auto.nivelDeDesgaste()
-// console.log(auto)
+//Creamos Los Vehiculos
+const veh1 = new Vehiculo(200, 'Nafta', 'Frontier', 'Nissan', 12000000, true, 'Camioneta', 2023);
+const veh2 = new Vehiculo(3200, 'Nafta', 'Hilux', 'Toyota', 12000000, true, 'Camioneta', 2022);
+const veh3 = new Vehiculo(300, 'Nafta', '3008', 'Peugeot', 12000, true, 'Auto', 2021);
+const veh4 = new Vehiculo(300, 'Nafta', '208', 'Peugeot', 12000, true, 'Auto', 2019);
+const veh6 = new Vehiculo(300, 'Nafta', 'Hilux', 'Toyota', 12000, true, 'Camioneta', 2021);
+const veh5 = new Vehiculo(300, 'Nafta', 'Corolla', 'Toyota', 12000, true, 'Auto', 2021);
+const veh7 = new Vehiculo(3000, 'Nafta', 'Etios', 'Toyota', 12000, true, 'Auto', 2018);
+const veh8 = new Vehiculo(50000, 'Nafta', 'Cronos', 'Fiat', 6000, true, 'Auto', 2022);
+exports.vehiculos = [veh1, veh2, veh3, veh4, veh5, veh6, veh7, veh8];
 //# sourceMappingURL=Vehiculo.js.map

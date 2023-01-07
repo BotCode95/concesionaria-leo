@@ -6,9 +6,9 @@ export class Concesionaria {
     vehiculos: Vehiculo[]
     
 
-    constructor( nombre: string, stockInicial: number, vehiculos: Vehiculo[] = []){
+    constructor( nombre: string, vehiculos: Vehiculo[] = []){
         this.nombre = nombre;
-        this.stock = stockInicial;
+        this.stock = vehiculos.length;
         this.vehiculos = vehiculos;
     }
 
@@ -18,8 +18,7 @@ export class Concesionaria {
     }
 
     getVehiculos() {
-        console.log(this.vehiculos)
-        return this.vehiculos
+      return this.vehiculos
     }
     buscarVehiculo(tipoDeBusqueda: TipoDeBusqueda, busqueda:string, busqueda2: number = 0) {
         switch(tipoDeBusqueda) {

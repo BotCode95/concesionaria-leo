@@ -6,10 +6,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Sucursal = void 0;
 const Concesionaria_1 = require("../Concesionaria/Concesionaria");
 const fs_1 = __importDefault(require("fs"));
-//TODO: Validar pase de vehiculos de la concesionaria a la sucursal
 class Sucursal extends Concesionaria_1.Concesionaria {
-    constructor(nombre, stock, direccion, horarioDeAtencion) {
-        super(nombre, stock);
+    constructor(nombre, vehiculos, direccion, horarioDeAtencion) {
+        super(nombre, vehiculos);
         this.direccion = direccion;
         this.horarioDeAtencion = horarioDeAtencion;
         this.gerente = null;
@@ -22,7 +21,7 @@ class Sucursal extends Concesionaria_1.Concesionaria {
             if (err) {
                 throw err;
             }
-            console.log('el archivo se creo exitosamente');
+            console.log('el archivo se creo exitosamente con el nombre ' + nombreSucursal + '-vehiculos en la raiz del proyecto');
         });
     }
     listarVehiculos() {
