@@ -10,32 +10,32 @@ export class Sucursal extends Concesionaria {
 
 
     constructor( nombre: string,  vehiculos: Vehiculo[],direccion: string, horarioDeAtencion: string){
-        super(nombre, vehiculos)
+        super(nombre, vehiculos);
         this.direccion = direccion;
         this.horarioDeAtencion = horarioDeAtencion;
         this.gerente = null;
     }
 
     setGerente(gerente: Gerente) {
-        this.gerente = gerente
+        this.gerente = gerente;
     }
 
     generarListadoVehiculos(nombreSucursal: string) {
         fs.appendFile(nombreSucursal +'-vehiculos.txt',this.listarVehiculos() + "." + "\n" , (err) => {
             if(err) {
-                throw err
+                throw err;
             }
-            console.log('el archivo se creo exitosamente con el nombre ' + nombreSucursal +'-vehiculos en la raiz del proyecto')
+            console.log('el archivo se creo exitosamente con el nombre ' + nombreSucursal +'-vehiculos en la raiz del proyecto');
         })
     }
     
 
     listarVehiculos(): string {
         const vehiculosMap =  this.vehiculos.map(vehiculo => {
-            return `Vehiculo => Categoría :${vehiculo.categoria} - Marca: ${vehiculo.marca} - Modelo: ${vehiculo.modelo} \n`
+            return `Vehiculo => Categoría :${vehiculo.categoria} - Marca: ${vehiculo.marca} - Modelo: ${vehiculo.modelo} \n`;
         })
 
-        return "Archivo ---------------- \n" + vehiculosMap.join('') + "---------------- Archivo"
+        return "Archivo ---------------- \n" + vehiculosMap.join('') + "---------------- Archivo";
     }
 }
 
