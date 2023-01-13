@@ -34,7 +34,6 @@ export class Vehiculo {
             }else {
                 this.nivelDesgaste = (this.kilometraje / antiguedad ) / 100
             }
-            console.log('Nivel de desgaste del auto', this.nivelDesgaste)
         }
         else if (this.categoria === 'Motocicleta'){
             if(this.serviceAlDia && this.kilometraje < 30000 ){
@@ -42,7 +41,6 @@ export class Vehiculo {
             }else {
                 this.nivelDesgaste = (this.kilometraje / antiguedad ) / 10
             }
-            console.log('Nivel de desgaste del auto', this.nivelDesgaste)
 
         }else {
             if(this.serviceAlDia){
@@ -50,7 +48,6 @@ export class Vehiculo {
             }else {
                 this.nivelDesgaste = (this.kilometraje / antiguedad ) / 10
             }
-            console.log('Nivel de desgaste del auto', this.nivelDesgaste)
         }
 
     }
@@ -75,6 +72,16 @@ const veh6 = new Vehiculo(300, 'Nafta', 'Hilux', 'Toyota',12000, true, 'Camionet
 const veh5 = new Vehiculo(300, 'Nafta', 'Corolla', 'Toyota',12000, true, 'Auto', 2021)
 const veh7 = new Vehiculo(3000, 'Nafta', 'Etios', 'Toyota',12000, true, 'Auto', 2018)
 const veh8 = new Vehiculo(50000, 'Nafta', 'Cronos', 'Fiat',6000, true, 'Auto', 2022)
+
+
+veh1.nivelDeDesgaste()
+veh2.nivelDeDesgaste()
+veh3.nivelDeDesgaste()
+veh4.nivelDeDesgaste()
+veh5.nivelDeDesgaste()
+veh6.nivelDeDesgaste()
+veh7.nivelDeDesgaste()
+veh8.nivelDeDesgaste()
 
 
 export const vehiculos = [veh1,veh2,veh3,veh4,veh5,veh6,veh7,veh8]

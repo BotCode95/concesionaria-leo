@@ -14,23 +14,28 @@ class Concesionaria {
     getVehiculos() {
         return this.vehiculos;
     }
-    buscarVehiculo(tipoDeBusqueda, busqueda, busqueda2 = 0) {
+    buscarVehiculo(local, tipoDeBusqueda, busqueda, busqueda2 = 0) {
         switch (tipoDeBusqueda) {
             case 'marca':
-                return this.vehiculos.filter((vehiculo) => vehiculo.marca.includes(busqueda));
+                console.log("Resultado de la búsqueda en " + local, this.vehiculos.filter((vehiculo) => vehiculo.marca.includes(busqueda)));
+                return;
             case 'modelo':
-                return this.vehiculos.filter((vehiculo) => vehiculo.modelo.includes(busqueda));
+                console.log("Resultado de la búsqueda en " + local, this.vehiculos.filter((vehiculo) => vehiculo.modelo.includes(busqueda)));
+                return;
             case 'nivelDeDesgaste':
-                return this.vehiculos.filter((vehiculo) => vehiculo.nivelDesgaste === parseInt(busqueda));
+                console.log("Resultado de la búsqueda en " + local, this.vehiculos.filter((vehiculo) => vehiculo.nivelDesgaste === parseInt(busqueda)));
+                return;
             case 'categoria':
-                return this.vehiculos.filter((vehiculo) => vehiculo.categoria.includes(busqueda));
+                console.log("Resultado de la búsqueda en " + local, this.vehiculos.filter((vehiculo) => vehiculo.categoria.includes(busqueda)));
+                return;
             case 'marca-nivelDeDesgaste':
-                return this.vehiculos.filter((vehiculo) => vehiculo.marca.includes(busqueda) && vehiculo.nivelDesgaste === busqueda2);
+                console.log("Resultado de la búsqueda en " + local, this.vehiculos.filter((vehiculo) => vehiculo.marca.includes(busqueda) && vehiculo.nivelDesgaste === busqueda2));
+                return;
             case 'categoria-nivelDeDesgaste':
-                console.log("funcion que heredamos ", this.vehiculos.filter((vehiculo) => vehiculo.categoria.includes(busqueda) && vehiculo.nivelDesgaste === busqueda2));
-                return this.vehiculos.filter((vehiculo) => vehiculo.categoria.includes(busqueda) && vehiculo.nivelDesgaste === busqueda2);
+                console.log("Resultado de la búsqueda en " + local, this.vehiculos.filter((vehiculo) => vehiculo.categoria.includes(busqueda) && vehiculo.nivelDesgaste === busqueda2));
+                return;
             default:
-                return this.vehiculos;
+                console.log(this.vehiculos);
         }
     }
 }
